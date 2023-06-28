@@ -1,0 +1,264 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-color: teal;
+    background-image:url(../Assets/Images/left.png),url(../Assets/Images/right.png),url(../Assets/Images/person1.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%,60%,100% 400vh;
+    background-position: left,right,0% 0%;
+    transition:background-position 0.5s, background-size 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header:hover{
+    background-position: -120% 0%, 180%, 50%;
+    background-size: 80%, 60%, 100% 100vh;
+}
+#pageName{
+    font-size: 10vw;
+    letter-spacing: 3vw;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    transform: scale(0) rotateX(360deg) rotateY(90deg);
+    transition: transform 1s;
+    transition-delay: 0.2s;
+}
+#header:hover #pageName{
+    transform: scale(1) rotateX(0deg) rotateY(0deg);
+}
+#navbar{
+    width: 100%;
+    height: 75px;
+    background-color: #fb8500;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px black;
+}
+#logo{
+    width: 150px;
+    position: relative;
+    bottom: 40px;
+    filter: drop-shadow(2px 2px 2px black);
+}
+#mainlist{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #023047;
+    position: relative;
+    bottom: 130px;
+    left: 30px;
+}
+.li{
+    font-size: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: transform 0.5s, text-decoration 0.5s;
+}
+a{
+    text-decoration: none;
+    color: #023047;
+}
+a:hover{
+    color: white;
+}
+.li:hover{
+    transform: scale(1.2);
+    text-decoration: underline 2px white;
+}
+#home,#places,#info{
+    width: 100%;
+    height: 200vh;
+}
+#home{
+    background-color: #023047;
+}
+#places{
+    background-color: #219ebc;
+}
+#info{
+    background-color: #8ecae6;
+}
+#imageCont{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 60px;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.imagesinHome{
+  width: 150px;
+  height: 200px;
+  position: relative;
+  right: 50px;
+  margin-left: -60px;
+  border-radius: 20px;
+  box-shadow: -5px -5px 5px black;
+  transform: rotateY(25deg) skewY(-20deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.imagesinHome:hover{
+  transform:rotateY(0deg) skewY(0deg) translate(0px,-180px) scale(1.5,1.2);
+  box-shadow: 2px 2px 5px black;
+}
+#guide{
+  width: 300px;
+  height: 250px;
+  background-color: rgba(210,210,210,0.564);
+  position: absolute;
+  left: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+#guideHeading{
+text-align: center;
+padding-top: 30px;
+letter-spacing: 5px;
+text-shadow: 1px 1px 2px black;
+color: #fb8500;
+}
+#guidePara{
+  width: 250px;
+  height: 10px;
+  padding-left: 25px;
+  text-align: justify;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-indent: 40px;
+  color: white;
+}
+#homepageInfo{
+  width: 100%;
+  height: 100vh;
+ /* background-color: #fb8500;*/
+ position: relative;
+ top: 120px;
+ border-top: 4px solid gainsboro;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ row-gap: 0px;
+ column-gap: 40px;
+ flex-wrap: wrap;
+}
+.travelContainer{
+  width: 200px;
+  height: 220px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+.containerImage{
+  width: 100%;
+  height: 100%;
+  background-size: 100% 250px;
+  transition: filter 0.5s;
+  border-radius: 10px;
+}
+.travelContainer:hover .containerImage{
+  filter: blur(10px);
+}
+.travelText{
+  position: relative;
+  bottom: 140px;
+  left: 10px;
+  font-size: 5vw;
+  text-align: center;
+  letter-spacing: 8px;
+  color: transparent;
+  transition: color 0.5s;
+}
+.travelContainer:hover .travelText{
+  color: white;
+}
+#walk{
+  background-image: url(../Assets/images/walking.png);
+}
+#Train{
+  background-image: url(../Assets/Images/train.png);
+}
+#Bus{
+  background-image: url(../Assets/Images/bus.png);
+}
+#Bike{
+  background-image: url(../Assets/Images/bike.png);
+}
+#Car{
+  background-image: url(../Assets/Images/car.png);
+}
+#Cycle{
+  background-image: url(../Assets/Images/bicycle.png);
+}
+#Flight{
+  background-image: url(../Assets/images/flight.jpg);
+}
+#Horse{
+  background-image: url(../Assets/Images/horse.jpg);
+}
+.PlaceContainer{
+  width: 300px;
+  height: 300px;
+  background-image:url(../../../WEBTECHNOLOGY/Blog/Assets/Images/mountains.jpg);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px black;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#places{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.PlaceName{
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+.brightnessCont{
+  background-size: 100% 300px;
+  filter: brightness(40%);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0px;
+  border-radius: 10px;
+}
+#Amruthsar{
+  background-image: url(../Assets/Images/gateway.jpg);
+}
+#Kalkaji{
+  background-image: url(../Assets/Images/golcondafort.jpg);
+}
+#Secunderabad{
+  background-image: url(../Assets/Images/mountains.jpg);
+}
+#Hyderabad{
+  background-image: url(../Assets/Images/charminar.jpg);
+}
+#Agra{
+  background-image: url(../Assets/Images/tajmahal.jpg);
+}
+#Mumbai{
+  background-image: url(../Assets/Images/lotusflower.jpg);
+}
+.PlaceContainer:hover{
+  transform: scale(1.2);
+}
